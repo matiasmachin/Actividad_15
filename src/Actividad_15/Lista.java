@@ -37,7 +37,7 @@ public class Lista {
 	
 		
 		while(bandera==false) {
-			System.out.println("\n\n Ejercicio 14 Archivo CSV \n\n");
+			System.out.println("\n\n Ejercicio 15 Archivo PDF \n\n");
 			System.out.println(" Menu Principal: \n\n\n");
 			System.out.println("1.- Cargar Datos.");
 			System.out.println("2.- Mostrar Todos Los Datos.");
@@ -85,7 +85,8 @@ public class Lista {
 			  	break;	
 			case 8:
 				System.out.println("\n Ordenar Registros");
-			    ordenar();
+			    ordenar1();
+			    listar();
 				break;	
 			case 9:
 				System.out.println("\n Guardar Registros en Archivo CSV");
@@ -295,9 +296,8 @@ public static void buscarnombre() {
 	}
 	}
 
-public static void ordenar() {
+public static void ordenar1() {
 	Collections.sort(lista, new Comparator<Persona>() {
-		@Override
 		public int  compare(Persona p1, Persona p2) {
 			return new String (p1.getNombre()).compareTo(new String (p2.getNombre()));
 		}
